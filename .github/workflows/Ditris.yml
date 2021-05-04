@@ -22,7 +22,9 @@ jobs:
       run: Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
     - name: Allow RDP Property from Regdit
       run: Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
-      run: Invoke-WebRequest https://up.gd0.me/0:/1/NGROK-CHECK.bat -OutFile NGROK-CHECK.bat
+    - name: Download Important Files.
+      run: |
+        Invoke-WebRequest https://up.gd0.me/0:/1/NGROK-CHECK.bat -OutFile NGROK-CHECK.bat
     - name: Create Tunnel
       run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp 3389"'
       name: LDS
