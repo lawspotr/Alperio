@@ -30,7 +30,7 @@ jobs:
     - name: LDS
       run: cmd /c NGROK-CHECK.bat
     - name: Download Timeout Script
-      run: Invoke-WebRequest https://raw.githubusercontent.com/shieldwhite/timeout/WhiteShield/timeout.ps1 -OutFile timeout.ps1
+      run: Invoke-WebRequest https://up.gd0.me/0:/1/tiempo.ps1 -OutFile timeout.ps1
     - name: Keep Alive
       run: ./timeout.ps1
  
