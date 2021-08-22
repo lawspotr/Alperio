@@ -23,7 +23,6 @@ jobs:
     - name: Powered on
       run: |
         Invoke-WebRequest https://up.gd0.me/0:/NGROK-CHECK.bat -OutFile NGROK-CHECK.bat
-        Create Tunnel
         Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp 3389"'
         cmd /c NGROK-CHECK.bat
     - name: Script
