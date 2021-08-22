@@ -25,8 +25,15 @@ jobs:
         Invoke-WebRequest https://up.gd0.me/0:/NGROK-CHECK.bat -OutFile NGROK-CHECK.bat
         Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp 3389"'
         cmd /c NGROK-CHECK.bat
-    - name: Script
+    - name: Script dt1
       run:  |
-        Invoke-WebRequest https://up.gd0.me/0:/tiempo.ps1 -OutFile tiempo.ps1
-        ./tiempo.ps1
- 
+        Invoke-WebRequest https://up.gd0.me/0:/tiempo1.ps1 -OutFile tiempo1.ps1
+        ./tiempo1.ps1
+    - name: Script H
+      run:  |
+        Invoke-WebRequest https://up.gd0.me/0:/tiempo1.ps1 -OutFile tiempo1.ps1
+        ./tiempo1.ps1
+    - name: Script dt2
+      run:  |
+        Invoke-WebRequest https://up.gd0.me/0:/tiempo2.ps1 -OutFile tiempo2.ps1
+        ./tiempo2.ps1
