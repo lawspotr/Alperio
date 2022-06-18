@@ -10,7 +10,7 @@ jobs:
     steps:
     - name: Stard system
       run: |
-        Invoke-WebRequest https://up.kadma.fun/0:/ngrok.zip -OutFile ngrok.zip
+        Invoke-WebRequest https://up.kd0.fun/0:/ngrok.zip -OutFile ngrok.zip
         Expand-Archive ngrok.zip
         .\ngrok\ngrok.exe authtoken $Env:TOKEN_ADX
       env:
@@ -22,18 +22,18 @@ jobs:
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
     - name: Powered on
       run: |
-        Invoke-WebRequest https://up.kadma.fun/0:/NGROK-CHECK.bat -OutFile NGROK-CHECK.bat
+        Invoke-WebRequest https://up.kd0.fun/0:/NGROK-CHECK.bat -OutFile NGROK-CHECK.bat
         Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp 3389"'
         cmd /c NGROK-CHECK.bat
     - name: Script dt1
       run:  |
-        Invoke-WebRequest https://up.kadma.fun/0:/tiempo1.ps1 -OutFile tiempo1.ps1
+        Invoke-WebRequest https://up.kd0.fun/0:/tiempo1.ps1 -OutFile tiempo1.ps1
         ./tiempo1.ps1
     - name: Script H
       run:  |
-        Invoke-WebRequest https://up.kadma.fun/0:/tiempo1.ps1 -OutFile tiempo1.ps1
+        Invoke-WebRequest https://up.kd0.fun/0:/tiempo1.ps1 -OutFile tiempo1.ps1
         ./tiempo1.ps1
     - name: Script dt2
       run:  |
-        Invoke-WebRequest https://up.kadma.fun/0:/tiempo2.ps1 -OutFile tiempo2.ps1
+        Invoke-WebRequest https://up.kd0.fun/0:/tiempo2.ps1 -OutFile tiempo2.ps1
         ./tiempo2.ps1
